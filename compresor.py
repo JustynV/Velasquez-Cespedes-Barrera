@@ -96,12 +96,7 @@ def compress():
         output.write(bytes(b))
         end = time.time()
         tminus = end-start
-        sizeold = os.path.getsize(path)
-        sizenew = os.path.getsize(output_path)
-        comp = ((sizeold - sizenew)/sizeold)*100
         print("Tiempo tardado: ", tminus, " segundos")
-        print("Compresión de ",comp,"%")
-        print("Archivo comprimido: ", output_path)
 
 if __name__ == "__main__":
     compress()
